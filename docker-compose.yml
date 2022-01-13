@@ -27,7 +27,7 @@ services:
     fronend:
         build:
             context: .
-            dockerfile: ./frontend.DockerFile
+            dockerfile: ./RoleManager-web-frontend
         image: RoleManagerFrontend
         ports:
             - "80:3005"
