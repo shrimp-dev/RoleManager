@@ -5,7 +5,7 @@ services:
         build:
             context: .
             dockerfile: ./backend.DockerFile
-        image: RoleManagerBackend
+        image: role-manager-backend
         ports:
             - "3000:3000"
         #     - "443:443"
@@ -28,7 +28,7 @@ services:
         build:
             context: .
             dockerfile: ./RoleManager-web-frontend
-        image: RoleManagerFrontend
+        image: role-manager-frontend
         ports:
             - "80:3005"
             - "443:3005"
