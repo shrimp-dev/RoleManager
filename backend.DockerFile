@@ -8,4 +8,4 @@ EXPOSE 3000
 
 WORKDIR /home/RoleManager-backend
 
-CMD  go mod tidy & echo "start backend" & go run main.go
+CMD  go mod tidy & go run main.go
