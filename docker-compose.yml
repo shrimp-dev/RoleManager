@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+    backend:
+        build:
+            context: .
+            dockerfile: ./backend.DockerFile
+        image: RoleManagerBackend
+        ports:
+            - "3000:3000"
+        #     - "443:443"
+        # environment:
+        #     - 
+        depends_on:
+            - 'mongo'
+
+    # MongoDB
+    mongo:
+        image: 'mongo'
+        container_name: mongo
+        ports:
+            - '27017:27017'
+        volumes:
+            - ./mongodata:/data/db
+        restart: always
+
+    fronend:
+        build:
+            context: .
+            dockerfile: ./frontend.DockerFile
+        image: RoleManagerFrontend
+        ports:
+            - "80:3005"
+            - "443:3005"
+        depends_on:
+            - 'backend'
