@@ -1,0 +1,3 @@
+[submodule "RoleManager-backend"]
+	path = RoleManager-backend
+	url = https://github.com/shrimp-dev/RoleManager-backend
