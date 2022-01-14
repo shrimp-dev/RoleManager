@@ -24,13 +24,13 @@ services:
             - ./mongodata:/data/db
         restart: always
 
-    fronend:
+    frotend:
         build:
             context: .
-            dockerfile: ./RoleManager-web-frontend
+            dockerfile: ./frontend.DockerFile
         image: role-manager-frontend
         ports:
             - "80:3000"
-            - "443:3000"
+            # - "443:3005"
         depends_on:
             - 'backend'
