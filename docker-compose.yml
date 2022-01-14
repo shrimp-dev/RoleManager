@@ -30,7 +30,7 @@ services:
             dockerfile: ./RoleManager-web-frontend
         image: role-manager-frontend
         ports:
-            - "80:3005"
-            - "443:3005"
+            - "80:3000"
+            - "443:3000"
         depends_on:
             - 'backend'
