@@ -6,4 +6,4 @@ COPY ./RoleManager-backend /home/RoleManager-backend
 
 WORKDIR /home/RoleManager-backend
 
-CMD  go mod tidy & go run main.go
+CMD  go mod tidy & go run .
