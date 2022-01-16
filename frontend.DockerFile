@@ -8,4 +8,4 @@ WORKDIR /home/rolemanager-web-frontend
 
 RUN npm i
 
-CMD npm run dev -- -p 3000
+CMD npm run build && npm run start
